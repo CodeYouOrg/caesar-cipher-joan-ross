@@ -13,14 +13,53 @@
 #The encrypted sentence is: udymts nx kzs!
 
 #  E₅ (x) = (x + 5) mod 26 (range 0, 27)
+# Caesar cipher
 
-callphrase = input('Please enter a sentence:')
+# given a word or a phrase, return an encrypted word or phrase with an alphabetical offset of 5. Ignore spaces and non-letter characters.
+
+# Examples:
+# abc -> efg
+# xyz -> def
+# aaa! -> eee!
+
+# ask for a word or phrase to be encrypted
+# for each character in the word,
+	# if the character is not a letter
+		# print the character
+	# if the character is a letter
+		# get the index of that character in the alphabet
+		# example: a = 0
+		# shift the index + 5
+		# if the shifted index is < 26:
+			# example shifted a = 5 -> e
+			# print the shifted character 
+		# else:
+			# subtract or mod 26 from the shifted index
+
+# alpha "abcdefghijklmnopqrstuvwxyz"
+
+
+
+
+indexshift = str.index() + 5
+callphrase = input('Please enter a sentence to be encrypted:')
+
 print (callphrase)
 
-def ceaser_cipher(phrase):
-    alphabet = range(0, 27)
-    cipher_eq = str(phrase) + 5
-    for phrase in alphabet:
-        return cipher_eq
+def ceaser_cipher():
+
+    for str in input:
+        if str.isdigit:
+            print(input)
+        elif str.isalpha:
+            return indexshift
+        if indexshift < 26:
+            print(str.input)
+        else: 
+            return indexshift - 26 
+        
+    print('The encrypted sentence is:', ceaser_cipher)
+        
     
-    return('The encrypted sentence is:', ceaser_cipher)
+
+        
