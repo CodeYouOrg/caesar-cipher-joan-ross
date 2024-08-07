@@ -39,27 +39,27 @@
 # alpha "abcdefghijklmnopqrstuvwxyz"
 
 
-
-
-indexshift = str.index() + 5
+#ask for a phrase
 callphrase = input('Please enter a sentence to be encrypted:')
-
 print (callphrase)
-
-def ceaser_cipher():
-
-    for str in input:
-        if str.isdigit:
-            print(input)
-        elif str.isalpha:
-            return indexshift
-        if indexshift < 26:
-            print(str.input)
-        else: 
-            return indexshift - 26 
-        
-    print('The encrypted sentence is:', ceaser_cipher)
-        
-    
-
+           
+def ceasar_cipher (input, shift = 5):
+    ceasar_output = []
+    # for each character in the word
+    for char in input:
+        #if the character is a letter
+        if char.isalpha():
+        # if that letter is uppercase or lowercase (found out 'ord' is for unicode and uses the unicode values of letters)
+            start = ord('A') if char.isupper() else ord('a')
+        # uppercase or lowercase chr, add the shift and modulo 26
+            indexshift = chr((start + (ord(char)) - start + shift) % 26 )
+        #add the newly encrypted phrase to the empty input
+            ceasar_output.append(indexshift)
+        else:
+            ceasar_output.append(char)
+    #return the function
+    return ''.join(ceasar_output)
+#print the output
+output = ceasar_cipher(callphrase)
+print('The encrypted sentence is:', output )
         
